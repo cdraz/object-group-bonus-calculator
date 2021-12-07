@@ -41,14 +41,23 @@ const employees = [
 
 console.log( employees );
 
-function NewEmployeeObject( array ){
-  for ( let employee of array ) {
+for ( let employee of array ) {
+  let bonusEmployeeArray = [];
+  NewEmployeeObject( employee );
+  bonusEmployeeArray.push(NewEmployeeObject);
+}
+
+console.log()
+
+function NewEmployeeObject( employee ){
     this.name = employee.name;
     this.bonusPercentage = calculateBonus( employee );
     this.totalComp = employee.annualSalary + employee.bonusPercentage * employee.annualSalary;
     this.totalBonus = employee.bonusPercentage * employee.annualSalary;
-  }
-} 
+}
+
+
+
 
 function calculateBonus ( employee ) {
     let bonusPercentage = 0;
@@ -81,3 +90,4 @@ function calculateBonus ( employee ) {
 }
 
 
+console.log(NewEmployeeObject(employees));
