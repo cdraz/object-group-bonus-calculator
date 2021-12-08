@@ -40,14 +40,14 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+let bonusEmployeeArray = [];
 
-for ( let employee of array ) {
-  let bonusEmployeeArray = [];
+for ( let employee of employees ) {
   NewEmployeeObject( employee );
   bonusEmployeeArray.push(NewEmployeeObject);
 }
 
-console.log()
+console.log(bonusEmployeeArray);
 
 function NewEmployeeObject( employee ){
     this.name = employee.name;
